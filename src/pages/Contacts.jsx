@@ -4,8 +4,8 @@ import Footer from '../components/Footer/Footer'
 const Contacts = () => {
   return (
     <>
-      <Header/>
-       Contacts
+      <Header title='Контакты' description=''/>
+        <h1>Contacts</h1>
        <Footer/> 
     </>
   )
