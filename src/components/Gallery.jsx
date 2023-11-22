@@ -12,7 +12,6 @@ import GridElem10 from '../assets/img/App/gallery/grid-row-5.jpg'
 import GridElem11 from '../assets/img/App/gallery/grid-row-6.jpg'
 import GridElem12 from '../assets/img/App/gallery/grid-col-6.jpg'
 import {
-    MDBContainer,
     MDBCol,
     MDBRow,
 } from 'mdb-react-ui-kit';
