@@ -5,7 +5,7 @@ const Contacts = () => {
   return (
     <>
       <Header title='Контакты' description='' />
-        
+        .
        <Footer/> 
     </>
   )
