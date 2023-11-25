@@ -10,6 +10,7 @@ import Contacts from './pages/Contacts';
 import Login from './pages/Login';
 import Service from './pages/Service';
 import Home from './pages/Home';
+import Shop from './pages/Shop';
 
 const App = () => (
   <Router>
@@ -18,6 +19,7 @@ const App = () => (
         <Route path='/' element={<Home />} />
         <Route path='/service' element={<Service />} />
         <Route path='/contacts' element={<Contacts />} />
+        <Route path='/shop' element={<Shop/>} />
         <Route path='/login' element={<Login />} />
       </Routes>
     </div>

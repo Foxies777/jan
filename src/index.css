@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 :root {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
@@ -23,7 +21,7 @@ a,p,h1,h2,h3,h4,h5,h6{
 }
 
 a {
-  font-weight: 500;
+  font-weight: 500 !important;
   text-decoration: none;
 }
 
@@ -82,7 +80,7 @@ h3{
   font-size: 2rem;
   font-weight: medium;
 }
-p{
+p, li, a{
   font-size: 1.5rem;
   font-weight: normal;
 }

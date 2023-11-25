@@ -22,7 +22,7 @@ const Header = (props) => {
                     <Nav className="fs-5">
                         <Nav.Link href="/service">Услуги</Nav.Link>
                         <Nav.Link href="/contacts">Контакты</Nav.Link>
-                        <Nav.Link href="#"><FontAwesomeIcon icon={faBagShopping} /></Nav.Link>
+                        <Nav.Link href="/shop"><FontAwesomeIcon icon={faBagShopping} /></Nav.Link>
                         <Nav.Link href="/login"><FontAwesomeIcon icon={faCircleUser} /></Nav.Link>
 
                     </Nav>

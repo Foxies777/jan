@@ -35,3 +35,17 @@ section{
   gap: 1.3rem;
   padding: 1.5rem;
 }
+
+
+
+section.Contacts{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  .Text, iframe{
+
+    min-width: 350px;
+    width: 40%;
+  }
+}
