@@ -29,7 +29,7 @@ function Accordions(props) {
                     <Accordion.Body>
 
                         <AccordionItem title='Комплект' description='(горные лыжи или сноуборды, ботинки и палки)'>
-                            <AccordionBody title='Комфорт' />
+                            <AccordionBody title='Комфорт' add={props.add} />
                             <AccordionBody title='Премиум' />
                             <AccordionBody title='Детский' />
                         </AccordionItem>

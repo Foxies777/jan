@@ -1,34 +1,40 @@
-nav{
+nav {
     position: fixed;
     min-width: 100vh;
     height: 70px;
     display: flex;
+    background-color: rgba($color: #fff, $alpha: .1);
     justify-content: space-between;
     box-shadow: 0 6px 10px rgba($color: #000000, $alpha: .25);
+    backdrop-filter: blur(10px);
     align-items: center;
     padding: 0 20px;
     left: 0;
     top: 0;
-    .Navigation{
+
+    .Navigation {
         width: 40%;
         display: flex;
         justify-content: center;
         gap: 5%;
     }
 }
-header{
+
+header {
     min-width: 100vh;
     height: 100vh;
     background-image: url(./header-bg.jpg);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-    .Text{
+
+    .Text {
         position: absolute;
         left: 1rem;
         top: 50%;
         transform: translateY(-50%);
-        p{
+
+        p {
             font-size: 1.5rem;
         }
     }

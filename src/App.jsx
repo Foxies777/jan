@@ -11,6 +11,8 @@ import Login from './pages/Login';
 import Service from './pages/Service';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
+import Profile from './pages/Profile';
+import Admin from './pages/Admin';
 
 const App = () => (
   <Router>
@@ -21,6 +23,8 @@ const App = () => (
         <Route path='/contacts' element={<Contacts />} />
         <Route path='/shop' element={<Shop/>} />
         <Route path='/login' element={<Login />} />
+        <Route path='/profile' element={<Profile/>}/>
+        <Route path='/admin' element={<Admin/>}/>
       </Routes>
     </div>
   </Router>

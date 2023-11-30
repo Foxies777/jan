@@ -1,83 +1,54 @@
-import React from 'react';
-import {
-  MDBBtn,
-  MDBContainer,
-  MDBCard,
-  MDBCardBody,
-  MDBInput,
-  MDBIcon,
-  MDBRow,
-  MDBCol,
-  MDBCheckbox
-}
-from 'mdb-react-ui-kit';
+import React, { useState } from "react";
+import '../components/Sign/Sign.scss';
+import SignUpForm from "../components/Sign/SignUp";
+import SignInForm from "../components/Sign/SignIn";
 
-function Login() {
+export default function Login() {
+  const [type, setType] = useState("signIn");
+  const handleOnClick = text => {
+    if (text !== type) {
+      setType(text);
+      return;
+    }
+  };
+  const containerClass =
+    "container " + (type === "signUp" ? "right-panel-active" : "");
   return (
-    <MDBContainer  className='my-5'>
-
-      <MDBRow className='g-0 align-items-center'>
-        <MDBCol col='6'>
-
-          <MDBCard className='my-5 cascading-right' style={{background: 'hsla(0, 0%, 100%, 0.55)',  backdropFilter: 'blur(30px)'}}>
-            <MDBCardBody className='p-5 shadow-5 text-center'>
-
-              <h2 className="fw-bold mb-5">Sign up now</h2>
-
-              <MDBRow>
-                <MDBCol col='6'>
-                  <MDBInput wrapperClass='mb-4' label='First name' id='form1' type='text'/>
-                </MDBCol>
-
-                <MDBCol col='6'>
-                  <MDBInput wrapperClass='mb-4' label='Last name' id='form2' type='text'/>
-                </MDBCol>
-              </MDBRow>
-
-              <MDBInput wrapperClass='mb-4' label='Email' id='form3' type='email'/>
-              <MDBInput wrapperClass='mb-4' label='Password' id='form4' type='password'/>
-
-              <div className='d-flex justify-content-center mb-4'>
-                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' />
+    <div className='LoginBody'>
+      <div className='Login'>
+        <div className={containerClass} id="container">
+          <SignUpForm />
+          <SignInForm />
+          <div className="overlay-container">
+            <div className="overlay">
+              <div className="overlay-panel overlay-left">
+                <h1>Привет!</h1>
+                <p>
+                  Чтобы оставаться на связи с нами, пожалуйста, войдите в систему, указав свои личные данные
+                </p>
+                <button
+                  className="ghost"
+                  id="signIn"
+                  onClick={() => handleOnClick("signIn")}
+                >
+                  Войти
+                </button>
               </div>
-
-              <MDBBtn className='w-100 mb-4' size='md'>sign up</MDBBtn>
-
-              <div className="text-center">
-
-                <p>or sign up with:</p>
-
-                <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
-                  <MDBIcon fab icon='facebook-f' size="sm"/>
-                </MDBBtn>
-
-                <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
-                  <MDBIcon fab icon='twitter' size="sm"/>
-                </MDBBtn>
-
-                <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
-                  <MDBIcon fab icon='google' size="sm"/>
-                </MDBBtn>
-
-                <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
-                  <MDBIcon fab icon='github' size="sm"/>
-                </MDBBtn>
-
+              <div className="overlay-panel overlay-right">
+                <h1>Привет, Друг!</h1>
+                <p>Введите свои личные данные и начните путешествие вместе с нами</p>
+                <button
+                  className="ghost "
+                  id="signUp"
+                  onClick={() => handleOnClick("signUp")}
+                >
+                  Регистрация
+                </button>
               </div>
-
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-
-        <MDBCol col='6'>
-          <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" className="w-100 rounded-4 shadow-4"
-            alt="" />
-        </MDBCol>
-
-      </MDBRow>
-
-    </MDBContainer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
-
-export default Login;

@@ -1,14 +1,14 @@
-#root{
+#root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-section{
+section {
   margin-top: 100px;
 }
 
-.AboutUs{
+.AboutUs {
   margin-top: 100px;
   display: flex;
   justify-content: space-around;
@@ -16,18 +16,22 @@ section{
   width: 100%;
   align-items: center;
   flex-wrap: wrap;
-  img{
+
+  img {
     width: 100%;
   }
-  .TextSection{
+
+  .TextSection {
     width: 30%;
     min-width: 100px;
-    p{
+
+    p {
       margin-top: 5%;
     }
   }
 }
-.Photos{
+
+.Photos {
 
   display: flex;
   align-items: center;
@@ -38,12 +42,14 @@ section{
 
 
 
-section.Contacts{
+section.Contacts {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  .Text, iframe{
+
+  .Text,
+  iframe {
 
     min-width: 350px;
     width: 40%;
